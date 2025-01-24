@@ -1,0 +1,31 @@
+.header-basquete{
+  display: flex; 
+  align-items: center; 
+  width: 100%; 
+  margin-bottom: 10px;
+}
+
+.texto-centrado{
+  flex: 1;
+  text-align: center;
+
+}
+
+.circulos{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  flex: 0 0 auto;
+}
+
+.texto-header{
+  font-size: 28px;
+}
+
+.cartinha{
+  padding: 10px 20px;
+  border: 2px solid black;
+}
+
+
+

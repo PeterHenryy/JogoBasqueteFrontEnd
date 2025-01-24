@@ -1,4 +1,4 @@
-import { Component, signal, inject, DestroyRef } from '@angular/core';
+import { Component, signal, inject, DestroyRef, OnInit } from '@angular/core';
 import { Jogo } from './jogo.model';
 import { JogosService } from '../services/jogos.service';
 
@@ -9,7 +9,7 @@ import { JogosService } from '../services/jogos.service';
   templateUrl: './jogos.component.html',
   styleUrl: './jogos.component.css'
 })
-export class JogosComponent{
+export class JogosComponent implements OnInit{
   jogos = signal<Jogo[] | undefined>(undefined);
   buscandoJogos = signal(false);
   erro = signal('');
@@ -17,7 +17,7 @@ export class JogosComponent{
   private jogosService = inject(JogosService);
   private destroyRef = inject(DestroyRef);;
   
-  buscarJogos() {
+  ngOnInit() {
     this.buscandoJogos.set(true);
 
     const inscricao = this.jogosService.buscarJogos().subscribe({

@@ -1,0 +1,18 @@
+
+<form class="formulario-pontos">
+  <h1 class="lancar-texto">Lançar Pontos</h1>
+  <p>
+    <label for="data">Data do jogo</label>
+  </p>
+  <input type="date" id="data" name="data" [(ngModel)]="inputData"/>
+
+  <p>
+    <label for="pontos-marcados">Quantos pontos você fez</label>
+  </p>
+  <input id="pontos-marcados" name="pontos-marcados" [(ngModel)]="inputPontosMarcados"/>
+
+  <div class="botao-container">
+
+    <button type="submit">Salvar</button>
+  </div>
+</form>

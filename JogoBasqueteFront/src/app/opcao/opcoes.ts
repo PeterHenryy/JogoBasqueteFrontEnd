@@ -1,10 +1,11 @@
 export const Opcoes = [
   {
-    id: '1',
+    id: 1,
     nome: 'Lançar Pontos'
   },
   {
-    id: '2',
+    id: 2,
     nome: 'Ver Resultados'
   }
 ]
+

@@ -13,7 +13,5 @@ export class OpcaoComponent {
   @Output() userClicked = new EventEmitter<string>();
   @Input({required:true}) opcaoSelecionada!:boolean;
 
-  onClickOpcao(){
-    this.userClicked.emit(this.opcao.id);
-  }
+  
 }

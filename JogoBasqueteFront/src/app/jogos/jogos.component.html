@@ -1,3 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Data</th>
+      <th>Pontos</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(jogo of jogos(); track jogo.id){
 
+      <tr>
+        <td>{{jogo.id}}</td>
+        <td>{{jogo.data}}</td>
+        <td>{{jogo.pontos}}</td>
+      </tr>
+    }
+  </tbody>
+</table>
 
 

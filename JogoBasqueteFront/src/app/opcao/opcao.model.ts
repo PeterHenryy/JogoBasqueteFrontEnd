@@ -1,4 +1,4 @@
 export interface Opcao{
-  id:string,
+  id:number,
   nome:string
 }

@@ -8,9 +8,14 @@
       <app-opcao class="item"
         [opcao]="opcao"
         [opcaoSelecionada]="opcao.id === idOpcaoSelecionada"
-      ></app-opcao>
+        (click)="idOpcaoSelecionada = opcao.id">
+      </app-opcao>
+
     
     }
   </div>
+  @if (obterComponente) {
+    <ng-container *ngComponentOutlet="obterComponente"></ng-container>
+  }
+  
 </main>
-<app-jogos></app-jogos>

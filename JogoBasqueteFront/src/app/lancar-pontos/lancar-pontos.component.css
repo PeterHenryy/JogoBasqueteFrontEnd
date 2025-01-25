@@ -30,8 +30,12 @@ input{
   justify-content: end;
 }
 
-.botao-container button{
+.botao-salvar{
   width: 40%;
   padding: 7px;
   border-radius: 2px;
+}
+
+.botao-salvar:hover{
+  cursor: pointer;
 }

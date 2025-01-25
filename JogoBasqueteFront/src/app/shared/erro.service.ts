@@ -8,12 +8,12 @@ export class ErroService {
 
   erro = this._erro.asReadonly();
 
-  showError(message: string) {
-    console.log(message);
-    this._erro.set(message);
+  mostrarErro(mensagem: string) {
+    console.log(mensagem);
+    this._erro.set(mensagem);
   }
 
-  clearError() {
+  limparError() {
     this._erro.set('');
   }
 }

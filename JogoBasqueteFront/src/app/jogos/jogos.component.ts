@@ -1,11 +1,14 @@
 import { Component, signal, inject, DestroyRef, OnInit } from '@angular/core';
+
 import { Jogo } from './jogo.model';
 import { JogosService } from '../services/jogos.service';
+import { ErroModalComponent } from "../shared/modal/erro-modal/erro-modal.component";
+
 
 @Component({
   selector: 'app-jogos',
   standalone: true,
-  imports: [],
+  imports: [ErroModalComponent],
   templateUrl: './jogos.component.html',
   styleUrl: './jogos.component.css'
 })
@@ -16,7 +19,7 @@ export class JogosComponent implements OnInit{
 
   private jogosService = inject(JogosService);
   private destroyRef = inject(DestroyRef);;
-  
+
   ngOnInit() {
     this.buscandoJogos.set(true);
 
@@ -36,5 +39,9 @@ export class JogosComponent implements OnInit{
     this.destroyRef.onDestroy(() => {
       inscricao.unsubscribe();
     });
+  }
+
+  removerModalErro(){
+    this.erro.set('');
   }
 }

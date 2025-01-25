@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { JogosComponent } from "./jogos/jogos.component";
@@ -26,4 +26,7 @@ export class AppComponent {
   get obterComponente() {
     return this.componentes[this.idOpcaoSelecionada];
   }
+
+
+
 }

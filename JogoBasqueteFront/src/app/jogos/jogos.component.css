@@ -1,3 +1,33 @@
+:host{
+  width: 50%;
+}
+
 .texto-centrado{
   text-align: center;
 }
+
+.resultado{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resultado h1{
+  font-size: 32px;
+}
+
+.resultado-titulo{
+  font-size: 25px;
+}
+
+.resultado-valor{
+  font-size: 28px;
+  color: royalblue;
+}
+
+.linha-separadora{
+  background-color: lightgray;
+  height: 3px;
+  border: none;
+}
+

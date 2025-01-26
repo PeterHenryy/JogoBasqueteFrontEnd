@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { type Opcao } from './opcao.model';
 
 @Component({
@@ -10,7 +10,6 @@ import { type Opcao } from './opcao.model';
 })
 export class OpcaoComponent {
   @Input({required:true}) opcao!:Opcao;
-  @Output() userClicked = new EventEmitter<string>();
   @Input({required:true}) opcaoSelecionada!:boolean;
 
   

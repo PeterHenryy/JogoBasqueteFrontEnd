@@ -34,7 +34,8 @@ export class LancarPontosComponent {
         pontos: this.inputPontosMarcados 
       })
       .subscribe({
-        next: (resposta) => console.log('Success:', resposta),
+        next: (resposta) => console.log('Success:', resposta)
+        
       });
     this.inputData = '';
     this.inputPontosMarcados = '';

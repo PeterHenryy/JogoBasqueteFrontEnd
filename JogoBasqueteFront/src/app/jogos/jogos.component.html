@@ -1,27 +1,28 @@
 @if(erro()){
   <app-erro-modal titulo="Ocorreu um erro!" [mensagem]="erro()" (eventoErro)="removerModalErro()"></app-erro-modal>
 }
-@if(jogos()) {
-
-  <table>
-    <thead>
-      <tr>
-        <th>Id</th>
-        <th>Data</th>
-        <th>Pontos</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for(jogo of jogos(); track jogo.id){
+@if(resultadoJogos()) {
   
-        <tr>
-          <td>{{jogo.id}}</td>
-          <td>{{jogo.data}}</td>
-          <td>{{jogo.pontos}}</td>
-        </tr>
-      }
-    </tbody>
-  </table>
+  
+  <div class="resultado">
+    <h1>Resultados </h1>
+    <p class="resultado-valor">
+      {{resultadoJogos()?.dataPrimeiroJogo | date:'dd/MM/yyyy'}} até 
+      {{resultadoJogos()?.dataUltimoJogo| date:'dd/MM/yyyy'}}
+    </p>
+  </div>
+
+  @for(resultado of resultados; track resultado.titulo){
+
+    <div class="resultado">
+      <p class="resultado-titulo">{{ resultado.titulo }}</p>
+      <p class="resultado-valor">{{ resultado.valor}}</p>
+    </div>
+    <hr class="linha-separadora">
+  }
+
+  
+  
 }
 
 

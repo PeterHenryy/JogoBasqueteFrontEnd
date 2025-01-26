@@ -10,7 +10,12 @@ main{
   border-radius: 2px;
   padding: 10px 20px;
   text-decoration: underline;
+  text-decoration-color: royalblue;
   font-size: 26px;
+}
+
+.item{
+  color: royalblue;
 }
 
 .item:hover{

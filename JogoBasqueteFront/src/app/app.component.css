@@ -1,7 +1,7 @@
 main{
   display: flex;
   align-items: flex-start;
-  gap: 10rem;
+  gap: 8rem;
 }
 
 .opcoes-container{
@@ -20,4 +20,13 @@ main{
 
 .item:hover{
   cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  main{
+    flex-direction: column;
+    row-gap: 50px;
+    align-items: center;
+  }
 }

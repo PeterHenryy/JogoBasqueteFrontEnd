@@ -17,7 +17,7 @@ import { ErroService } from '../shared/erro.service';
 
 export class JogosComponent implements OnInit{
   resultadoJogos = signal<ResultadoJogos | undefined>(undefined);
-  buscandoJogos = signal(false);
+
   erro = signal('');
   
 
@@ -26,7 +26,6 @@ export class JogosComponent implements OnInit{
   private erroService = inject(ErroService)
 
   ngOnInit() {
-    this.buscandoJogos.set(true);
 
     const inscricao = this.jogosService.buscarJogos().subscribe({
       next: (resultadoJogos) => {
@@ -35,13 +34,8 @@ export class JogosComponent implements OnInit{
       error: (erro: Error) => {
         this.erro.set(this.erroService.erro());
       },
-      complete: () => {
-        this.buscandoJogos.set(false);
-        
-      }
     })
     
-
     this.destroyRef.onDestroy(() => {
       inscricao.unsubscribe();
     });

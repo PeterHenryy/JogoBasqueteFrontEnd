@@ -3,6 +3,7 @@ import { provideHttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app/app.component';
 
+//provendo cliente http
 bootstrapApplication(AppComponent, {
   providers: [provideHttpClient()]
 }).catch((err) => console.error(err));

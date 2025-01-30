@@ -1,8 +1,8 @@
+
 @if(erro()){
   <app-erro-modal titulo="Ocorreu um erro!" [mensagem]="erro()" (eventoErro)="removerModalErro()"></app-erro-modal>
 }
 @if(resultadoJogos()) {
-  
   
   <div class="resultado">
     <h1>Resultados </h1>

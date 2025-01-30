@@ -10,6 +10,8 @@ import { type Opcao } from './opcao.model';
 })
 export class OpcaoComponent {
   @Input({required:true}) opcao!:Opcao;
+
+  //estabelecendo qual opçao está selecionada para saber qual componente mostrar ao usuário
   @Input({required:true}) opcaoSelecionada!:boolean;
 
   

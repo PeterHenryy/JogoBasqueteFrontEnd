@@ -9,7 +9,10 @@ import { ErroService } from '../../erro.service';
     styleUrl: './erro-modal.component.css',
     imports: [ModalComponent]
 })
+
+//componente modal para mostrar ao usuário possíveis erros da aplicação
 export class ErroModalComponent {
+
   titulo = input<string>();
   mensagem = input<string>();
   private erroService = inject(ErroService);

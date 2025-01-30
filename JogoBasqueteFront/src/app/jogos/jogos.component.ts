@@ -19,8 +19,8 @@ export class JogosComponent implements OnInit{
   resultadoJogos = signal<ResultadoJogos | undefined>(undefined);
 
   erro = signal('');
-  
 
+  //estabelecendo services e destroyRef
   private jogosService = inject(JogosService);
   private destroyRef = inject(DestroyRef);;
   private erroService = inject(ErroService)

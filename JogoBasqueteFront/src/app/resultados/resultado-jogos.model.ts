@@ -1,3 +1,5 @@
+//objeto estabelecendo propriedades a serem mostradas ao usuário ao clicar em Ver Resultados no Menu
+
 export interface ResultadoJogos{
   dataPrimeiroJogo: string,
   dataUltimoJogo: string,

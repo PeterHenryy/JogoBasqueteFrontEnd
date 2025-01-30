@@ -15,7 +15,11 @@ import { LancarPontosComponent } from "./lancar-pontos/lancar-pontos.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  //passando ao AppComponent as possíveis opções do menu
   opcoes = Opcoes;
+
+  //avisando ao AppComponent qual opcao está selecionada para saber qual componente mostrar ao usuário
   idOpcaoSelecionada = 0;
 
   componentes: { [key: number]: any } = {
@@ -23,6 +27,7 @@ export class AppComponent {
     2: JogosComponent,
   };
 
+  //renderizando componentes de maneira dinâmica baseando-se em qual opção do Menu foi selecionada
   get obterComponente() {
     return this.componentes[this.idOpcaoSelecionada];
   }

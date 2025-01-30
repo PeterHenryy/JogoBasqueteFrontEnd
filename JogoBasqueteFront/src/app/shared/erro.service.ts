@@ -4,6 +4,8 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root'
 })
 export class ErroService {
+  
+  //service para mostrar erro do back end no modal
   private _erro = signal('');
 
   erro = this._erro.asReadonly();

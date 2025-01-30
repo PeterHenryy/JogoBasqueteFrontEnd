@@ -11,6 +11,9 @@ import { type ResultadoJogos } from '../resultados/resultado-jogos.model';
 })
 
 export class JogosService {
+  
+  //service responsável por operações API
+
   private httpClient = inject(HttpClient);
   private jogosRegistrados = signal<Jogo[]>([]);
   private urlAPI = 'https://localhost:44369/jogo';
